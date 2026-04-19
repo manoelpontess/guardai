@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "GuardAI",
+    "slug": "guardai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0f1e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.guardai.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "GuardAI usa a câmera para monitoramento de segurança e babá eletrônica.",
+        "NSMicrophoneUsageDescription": "GuardAI usa o microfone para detecção de sons, alertas de choro e comunicação bidirecional.",
+        "NSPhotoLibraryAddUsageDescription": "GuardAI salva clipes de vídeo na sua galeria.",
+        "UIBackgroundModes": [
+          "audio",
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0f1e"
+      },
+      "package": "com.guardai.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "FOREGROUND_SERVICE",
+        "WAKE_LOCK",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static",
+      "name": "GuardAI — Câmera de Segurança"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#00d4ff"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "GuardAI precisa do microfone para detecção de som e babá eletrônica."
+        }
+      ]
+    ],
+    "scheme": "guardai",
+    "extra": {
+      "eas": {
+        "projectId": "4b32428a-fa17-47c1-b905-455da95756fb"
+      },
+      "router": {
+        "origin": false
+      }
+    },
+    "owner": "manoelpontess"
+  }
+}
